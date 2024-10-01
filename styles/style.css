@@ -40,13 +40,13 @@ ol {
 /* Основной блок  */
 
 .content {
-  display: flex; 
-  margin: auto; 
-  align-items: flex-end; 
-  width: auto; 
-  height: auto; 
+  display: flex;
+  margin: auto;
+  align-items: flex-end;
+  max-width: 1140px;
+  height: auto;
   gap: 30px;
-  padding: 212px 30px;
+  padding: 133px 30px;
 }
 
 
