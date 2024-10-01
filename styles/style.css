@@ -36,3 +36,179 @@ ul,
 ol {
   list-style: none;
 }
+
+/* Основной блок  */
+
+.content {
+  display: flex; 
+  align-items: flex-end; 
+  gap: 30px;
+  padding: 133px 30px;
+}
+
+
+/* Блок с большим видео */
+
+.result__video-container{
+  position: relative;
+  object-fit: cover;
+  width: 711px;
+  min-height: 386px;
+  margin-bottom: 16px;
+}
+
+.result__video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*  поиск снизу*/
+
+.search-form {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  
+}
+
+.search-form__fieldset-title  {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Блок со вторым контентом */
+
+.content__details {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  font-family: Oswald, sans-serif;
+  font-size: 75px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 94%;
+  text-transform: uppercase;
+}
+
+.content__accent {
+color: #545050;
+}
+
+/* Основной блок описание - видео  */
+
+.content__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: auto;
+  max-height: 298px;
+}
+
+.content__list-item:not(:last-of-type) {
+  margin-bottom: 30px;
+}
+
+.content__card-link{
+  text-decoration: none;
+  color: #fff;
+}
+
+.content__video-card-title {
+  font-family: Oswald, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  font-style: normal;
+  line-height: 100%;
+  text-transform: uppercase;
+}
+
+.content__video-card-description {
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 16.2%;
+  margin-top: 6px;
+}
+
+.content__video-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* размер блок2 видео */
+
+.content__video-card-thumbnail {
+  width: 194px;
+  min-height: 103px;
+}
+
+.content__video-card-description-container {
+  display: flex;
+    gap: 6px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+} 
+
+/* поля формы */
+
+fieldset {
+  border: none;
+}
+
+
+.search-form__fieldset {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.search-form__textfield {
+  border: none;
+  background-color: transparent;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  width: 225px;
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
+  color: #ffffff70;
+  cursor: pointer;
+  appearance: none;
+ }
+
+
+ .search-form__submit-button {
+  background-color: transparent;
+  border: 1px solid #fff;
+  font-family: 'Fira Sans Condensed', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  font-style: normal;
+  color: #fff;
+  padding: 6px 73.5px;
+  align-self: end;
+  cursor: pointer;
+ }
+
+
+ 
