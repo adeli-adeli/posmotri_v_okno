@@ -49,7 +49,7 @@ ol {
   display: flex;
   margin: auto;
   align-items: flex-end;
-  max-width: 1140px;
+  width: 1140px;
   height: auto;
   gap: 30px;
 }
@@ -66,8 +66,8 @@ ol {
   position: relative;
   object-fit: cover;
   width: 711px;
-  height: 386px;
-  margin-bottom: 16px;
+  /* height: 386px;
+  margin-bottom: 16px; */
 }
 
 .result__video {
@@ -81,6 +81,7 @@ ol {
 .search-form {
   display: flex;
   gap: 40px;
+  justify-content: space-between;
 }
 
 .search-form__fieldset-title {
