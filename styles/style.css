@@ -57,22 +57,22 @@ ol {
 .result {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 18px;
 }
 
 /* Блок с большим видео */
 
 .result__video-container {
   position: relative;
-  object-fit: cover;
   width: 711px;
-  /* height: 386px;
-  margin-bottom: 16px; */
+  height: 386px;
 }
 
 .result__video {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
   display: block;
 }
 
@@ -240,4 +240,11 @@ fieldset {
   height: 19px;
   vertical-align: middle;
   border: 1px solid #fff;
+}
+
+input[type="checkbox"]:checked + span {
+  background-image: url(/images/Rectangle.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
