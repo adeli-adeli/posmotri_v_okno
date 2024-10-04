@@ -114,7 +114,6 @@ fieldset {
   border-bottom: 1px solid #fff;
   border-top: 1px solid #fff;
   color: #ffffff70;
-  cursor: pointer;
   appearance: none;
 }
 
@@ -165,7 +164,6 @@ fieldset {
   font-size: 30px;
   font-weight: 700;
   font-style: normal;
-  line-height: 100%;
   text-transform: uppercase;
 }
 
@@ -192,7 +190,6 @@ fieldset {
 
 .content__video-card-description-container {
   display: flex;
-  gap: 6px;
   width: 100%;
   flex-direction: column;
 }
@@ -218,7 +215,6 @@ fieldset {
   font-style: normal;
   color: #fff;
   align-self: end;
-  cursor: pointer;
 }
 
 .search-form__submit-button {
@@ -242,9 +238,65 @@ fieldset {
   border: 1px solid #fff;
 }
 
+/* чекбокс */
+
 input[type="checkbox"]:checked + span {
   background-image: url(/images/Rectangle.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+}
+
+/* кнопки  */
+
+/* все */
+
+.search-form__label:focus {
+  outline: none;
+}
+
+.search-form__checkbox:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: none;
+  border: 1px solid #fff;
+}
+
+/* поиск , выбор , блок с видео*/
+
+.search-form__submit-button:active {
+  background-color: #545050;
+}
+
+.search-form__textfield:active {
+  border: 1px solid #fff;
+}
+
+.content__video-card:active {
+  background-color: #545050;
+}
+
+/* поиск и выбор*/
+
+.search-form__textfield:hover {
+  cursor: auto;
+}
+
+.search-form__label-text:hover {
+  cursor: url(/images/cursor.png), auto;
+  border-bottom: 1px solid #fff;
+}
+
+/* кнопка и видео */
+
+.button:hover {
+  cursor: url(/images/cursor.png), auto;
+  text-decoration: underline;
+}
+
+.content__video-card:hover {
+  cursor: url(/images/cursor.png), auto;
+  text-decoration: underline;
 }
