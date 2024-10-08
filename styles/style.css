@@ -153,6 +153,7 @@ fieldset {
 }
 
 .content__card-link {
+  display: block;
   text-decoration: none;
   color: #fff;
   word-break: normal;
@@ -274,6 +275,10 @@ input[type="checkbox"]:checked + span {
   outline: none;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
 .search-form__label:has(:focus-visible) {
   outline-offset: 1px;
   outline: solid #fff 1px;
@@ -282,6 +287,12 @@ input[type="checkbox"]:checked + span {
 .button:focus-visible {
   outline-offset: 1px;
   outline: solid #fff 1px;
+}
+
+.content__card-link:focus-visible {
+  outline-offset: 1px;
+  outline: solid #fff 1px;
+  margin: 2px 2px;
 }
 
 /* поиск , выбор , блок с видео*/
