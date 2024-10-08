@@ -9,6 +9,9 @@ html {
 }
 
 .page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   inline-size: 1200px;
   block-size: 100%;
   margin: auto;
@@ -35,12 +38,6 @@ fieldset {
 ul,
 ol {
   list-style: none;
-}
-
-.page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 /* Основной блок  */
@@ -147,7 +144,8 @@ fieldset {
   flex-direction: column;
   position: relative;
   overflow: auto;
-  max-height: 298px;
+  min-width: 399px;
+  height: 298px;
 }
 
 .content__list-item:not(:last-of-type) {
@@ -157,6 +155,7 @@ fieldset {
 .content__card-link {
   text-decoration: none;
   color: #fff;
+  word-break: normal;
 }
 
 .content__video-card-title {
@@ -165,6 +164,10 @@ fieldset {
   font-weight: 700;
   font-style: normal;
   text-transform: uppercase;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
@@ -172,8 +175,8 @@ fieldset {
   font-size: 18px;
   font-weight: 400;
   font-style: normal;
-  line-height: 16.2%;
-  margin-top: 6px;
+  line-height: 16.2px;
+  max-width: 200px;
 }
 
 .content__video-card {
@@ -186,6 +189,8 @@ fieldset {
 .content__video-card-thumbnail {
   width: 194px;
   min-height: 103px;
+  object-position: center;
+  object-fit: cover;
 }
 
 .content__video-card-description-container {
@@ -208,7 +213,7 @@ fieldset {
 
 .button {
   background-color: transparent;
-  border: 1px solid #fff;
+  border: 1px solid currentColor;
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
   font-weight: 700;
@@ -241,10 +246,12 @@ fieldset {
 /* чекбокс */
 
 input[type="checkbox"]:checked + span {
-  background-image: url(/images/Rectangle.png);
+  background-color: currentColor;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  outline-offset: 1px;
+  outline: solid #fff 1px;
 }
 
 /* кнопки  */
@@ -259,22 +266,40 @@ input[type="checkbox"]:checked + span {
   outline: none;
 }
 
-.search-form__label:has(:focus-visible) {
+.search-form__textfield:focus {
   outline: none;
-  border: 1px solid #fff;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline-offset: 1px;
+  outline: solid #fff 1px;
+}
+
+.button:focus-visible {
+  outline-offset: 1px;
+  outline: solid #fff 1px;
 }
 
 /* поиск , выбор , блок с видео*/
 
-.search-form__submit-button:active {
+.button:active {
   background-color: #545050;
 }
 
 .search-form__textfield:active {
-  border: 1px solid #fff;
+  outline-offset: 1px;
+  outline: solid #fff 1px;
 }
 
 .content__video-card:active {
+  background-color: #545050;
+}
+
+.content__card-link_current {
   background-color: #545050;
 }
 
@@ -284,7 +309,7 @@ input[type="checkbox"]:checked + span {
   cursor: auto;
 }
 
-.search-form__label-text:hover {
+.search-form__label:hover .search-form__label-text {
   cursor: url(/images/cursor.png), auto;
   border-bottom: 1px solid #fff;
 }
